@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283D;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    transition: 0.6s ease-out;
+}
+
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex; /* Tetap menggunakan flexbox */
+    align-items: center; /* Menyusun elemen sejajar secara vertikal */
+    gap: 10px; /* Memberikan jarak antar elemen */
+    position: relative;
+}
+
+.search-box i {
+    color: #06283D;
+    font-size: 28px;
+}
+
+.search-box input {
+    color: #06283D;
+    flex: 1; /* Membuat input fleksibel */
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 15px; /* Kurangi padding karena ikon tidak lagi absolut */
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+    display: flex; /* Menjaga ikon di tengah */
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button:hover {
+    color: #fff;
+    background: #06283D;
+}
+
+
+.current-weather {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather-box img {
+    width: 40%;
+    max-width: 200px;
+}
+
+.weather-box .temperature {
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.weather-box .temperature span {
+    font-size: 1.5rem;
+}
+
+.weather-box .description {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Memastikan elemen berada di tengah */
+    gap: 30px; /* Memberikan jarak antar elemen */
+    margin-top: 30px;
+}
+
+.weather-details .humidity, 
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    text-align: center; /* Teks di tengah */
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.weather-details i {
+    color: #06283D;
+    font-size: 26px;
+}
+
+.weather-details .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Konten teks di tengah */
+}
+
+.weather-details span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p {
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.forecast-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forecast-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #06283D;
+}
+
+.forecast-days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-day {
+    flex: 1;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-day .day {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.forecast-day .temp {
+    font-size: 18px;
+}
+
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+    opacity: 0;
+}
+
+.not-found img {
+    width: 70%;
+    max-width: 300px;
+}
+
+.not-found p {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.recommendation-container {
+    margin-top: 20px;
+    background-color: #e6f2ff;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.recommendation-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #06283D;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.recommendation-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendation-list li {
+    background-color: #dff6ff;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #06283D;
+    transition: background-color 0.3s ease;
+}
+
+.recommendation-list li:hover {
+    background-color: #06283D;
+    color: #dff6ff;
+}
